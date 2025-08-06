@@ -1,0 +1,74 @@
+{
+  "name": "ui-library",
+  "version": "0.0.1",
+  "description": "ui lib",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/genarocolusso/ui-library.git"
+  },
+  "scripts": {
+    "build": "rollup -c",
+    "dev": "rollup -c -w",
+    "test": "jest --watchAll --verbose",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
+  },
+  "babel": {
+    "sourceType": "unambiguous",
+    "presets": [
+      "@babel/preset-env",
+      "@babel/preset-typescript",
+      [
+        "@babel/preset-react",
+        {
+          "runtime": "automatic"
+        }
+      ]
+    ]
+  },
+  "jest": {
+    "testEnvironment": "jsdom"
+  },
+  "author": "Genaro Colusso",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/genarocolusso/ui-library/issues"
+  },
+  "homepage": "https://github.com/genarocolusso/ui-library#readme",
+  "devDependencies": {
+    "@babel/preset-env": "^7.28.0",
+    "@babel/preset-react": "^7.27.1",
+    "@babel/preset-typescript": "^7.27.1",
+    "@rollup/plugin-commonjs": "^28.0.6",
+    "@rollup/plugin-json": "^6.1.0",
+    "@rollup/plugin-node-resolve": "^16.0.1",
+    "@storybook/addon-docs": "^9.1.1",
+    "@storybook/addon-onboarding": "^9.1.1",
+    "@storybook/react-vite": "^9.1.1",
+    "@testing-library/jest-dom": "^6.6.4",
+    "@testing-library/react": "^16.3.0",
+    "@types/jest": "^30.0.0",
+    "@types/react": "^19.1.9",
+    "jest": "^30.0.5",
+    "jest-environment-jsdom": "^30.0.5",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "rollup": "^4.46.2",
+    "rollup-plugin-dts": "^6.2.1",
+    "rollup-plugin-postcss": "^4.0.2",
+    "rollup-plugin-typescript2": "^0.36.0",
+    "storybook": "^9.1.1",
+    "styled-components": "^6.1.19",
+    "tslib": "^2.8.1",
+    "typescript": "^5.9.2"
+  },
+  "peerDependencies": {
+    "react": ">=16"
+  }
+}
